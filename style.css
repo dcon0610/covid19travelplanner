@@ -27,14 +27,14 @@ textarea
     font: bold 40px arial;
     color: #fff;
 }
-.tdCity
+.tdcity
 {
     width: 20%;
     background: #efefef;
     padding: 10px;
     min-height: 300px;
 }
-.tdFlight
+.tdflight
 {
     padding: 10px;
     vertical-align: top;
@@ -45,13 +45,13 @@ textarea
 {
     border: 1px solid #ccc;
 }
-.searchCitys
+.searchcitie-s
 {
     padding: 25px 5px 5px 0px;
     font-size: 14px;
     cursor:pointer;
 }
-.searchFlights div
+.searchflights div
 {
     border: 1px solid #ddd;
     border-bottom: 0px;
@@ -59,7 +59,7 @@ textarea
     background: #fff;
 }
 
-.cityCovid div
+.citycovid div
 {
     padding: 5px;
 }
@@ -72,7 +72,7 @@ textarea
 
 #flightdata1, #flightdata2, #flightdata3, #flightdata4, #flightdata5
 {
-    background: #4169E1;
+    background:burlywood;
     margin:10px;
     font-size:10px;
     padding:8px;
