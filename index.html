@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Covid19 Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar center">Covid19 Travel Planner</div>
+    <div class="container">
+      <table style="100%">
+       <tr>
+          <td class="tdcity">
+              <div style="margin-bottom: 30px; width:300px; line-height: 2.0";>
+                <div style="color:red;">Is it safe for traveling?</div>
+                <input type="button" value="Yes" onclick="SearchFlights"/>
+                <input type="button" value="No" onclick="No"/>
+              <div>Check the city safety here</div>
+              <div>
+                  <input type="text" class="SearchTxt"/>
+                  <input type="button" value="Go" onclick="GoCovid19()"/>
+              </div>
+              <div class="searchCities">
+              </div>
+            </div>
+         
+            <div style="min-height: 200px">
+                <div>Flight Booking</div>
+                <div>
+                    <input type="text" class="SearchTxt"/>
+                    <input type="datetime-local" class="SearchTxt"/>
+                    <input type="button" value="Go" onclick="GoFlight()"/>
+                </div>
+                <div class="searchflights">
+                </div>
+            </div>        
+            </td>
+          
+          <td class="tdFlight">
+            <div style="min-height: 200px">
+            <div style="border:1px solid #efefef;padding: 20px;">Covid19 Up-to-Date Info</div>
+            <div class="citycovid">
+                <div class="city"></div>
+                <div class="country"></div>
+                <div class="statistics"></div>
+                <div class="history"></div>
+        </div>
+
+            <div style="min-height: 200px">
+          <div style="border:1px solid #efefef;padding: 20px;">Available Flights</div>
+                 <div id="flightdata1"> 1
+                 </div> 
+                 <input type="button" value="Book" onclick="flightbook"/>
+                     <div id="flightdata2">2
+                     </div>
+                     <input type="button" value="Book" onclick="flightbook"/>
+                    <div id="flightdata3">3
+                    </div>
+                    <input type="button" value="Book" onclick="flightbook"/>
+                    <div id="flightdata4">4
+                    </div>      
+                    <input type="button" value="Book" onclick="flightbook"/>
+            </div>       
+          </td>
+      </tr>
+    </table>
+
+    <div class="container-fluid">   
+      <p style="text-align: center;">All Right Reserved by Sweet Return Gnomes.</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!--<script>src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es-us.js"</script>-->
+</body>
+</html>
+
