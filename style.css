@@ -33,19 +33,20 @@ textarea
     background: #efefef;
     padding: 10px;
     min-height: 300px;
+    vertical-align:top;
 }
 .tdflight
 {
     padding: 10px;
     vertical-align: top;
-    width: 80%;
+    
 }
 
 .searchTxt
 {
     border: 1px solid #ccc;
 }
-.searchcitie-s
+.searchcities
 {
     padding: 25px 5px 5px 0px;
     font-size: 14px;
@@ -62,6 +63,7 @@ textarea
 .citycovid div
 {
     padding: 5px;
+    line-height:1.5;
 }
 
 .tdbooking td
