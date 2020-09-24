@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $(document).ready(function  (){
 
     
@@ -39,30 +39,9 @@ return
 
     }
     })
-
-
-
-
-
-
-
-      
+     
     })
 
 
   })
 
-
-  
-
-
-
-
-
-
-=======
-$(document).ready(function () {
-
-    console.log(Hi)
-})
->>>>>>> timothy
