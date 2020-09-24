@@ -1,3 +1,4 @@
+
 body
 {
     margin: auto;
@@ -24,31 +25,49 @@ textarea
     height: 60px;
     background: #696969;
     padding-top: 20px;
-    font: bold 40px arial;
+    font: bold 20pt arial;
     color: #fff;
 }
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    }
 .tdcity
 {
-    width: 20%;
+    flex: 0 0 30%;
+    max-width: 30%;
+    
     background: #efefef;
     padding: 10px;
-    min-height: 300px;
+    height:100%;
     vertical-align:top;
 }
+.tdcitycovid
+{
+    flex: 0 0 65%;
+    max-width: 65%;
+    padding:15px;
+ }
+ 
+
 .tdflight
 {
     padding: 10px;
     vertical-align: top;
     
 }
-
+.fbook input
+{
+    margin-left:10px;
+    }
 .searchTxt
 {
     border: 1px solid #ccc;
 }
 .searchcities
 {
-    padding: 25px 5px 5px 0px;
+    padding: 15px 5px 5px 0px;
     font-size: 14px;
     cursor:pointer;
 }
@@ -114,4 +133,28 @@ button
     text-align: center;
     font: bold 10px arial;
     color: #fff;
+}
+
+/* media queries*/
+@media screen and (max-width:500px){
+.tdcity
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    
+}
+.tdcitycovid
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+ }
+    
+    topbar {
+        
+        font: bold 20px arial;
+    }
+
+    footer{
+        background-color: black;
+    }
 }
