@@ -1,160 +1,39 @@
-
-body
-{
-    margin: auto;
-    padding: auto;
+table {
+    width: 100%;
 }
 
-
-textarea
-{
-    resize: none;
-    color: #191970;
-    border-top: 0px;
-    border-bottom: 1px;
-    border-bottom-color: #333;
-    padding-top: 5px;
+.navbar {
+    background-color: #66ccff;
 }
 
-.center
-{
-    text-align: center;
+#noWrap {
+    white-space: nowrap;
 }
-.topbar
-{
-    height: 60px;
-    background: #696969;
-    padding-top: 20px;
-    font: bold 20pt arial;
-    color: #fff;
-}
-.container
-{
+
+/*class css not in bulma which required adjustment*/
+.center { 
     display: flex;
-    flex-wrap: wrap;
-    }
-.tdcity
-{
-    flex: 0 0 30%;
-    max-width: 30%;
-    
-    background: #efefef;
-    padding: 10px;
-    height:100%;
-    vertical-align:top;
-}
-.tdcitycovid
-{
-    flex: 0 0 65%;
-    max-width: 65%;
-    padding:15px;
- }
- 
-
-.tdflight
-{
-    padding: 10px;
-    vertical-align: top;
-    
-}
-.fbook input
-{
-    margin-left:10px;
-    }
-.searchTxt
-{
-    border: 1px solid #ccc;
-}
-.searchcities
-{
-    padding: 15px 5px 5px 0px;
-    font-size: 14px;
-    cursor:pointer;
-}
-.searchflights div
-{
-    border: 1px solid #ddd;
-    border-bottom: 0px;
-    padding: 10px 0 10px 20px;
-    background: #fff;
+    margin: 0 auto; 
+    justify-content: center;   
+    white-space: nowrap ;
 }
 
-.citycovid div
-{
-    padding: 5px;
-    line-height:1.5;
+.padding {
+    padding: 2%;
 }
 
-.tdbooking td
-{
-    width: 20%;
-    border: 1px solid #ccc;
+.margin {
+    margin-top:2%;
 }
 
-#flightdata1, #flightdata2, #flightdata3, #flightdata4, #flightdata5
-{
-    background:burlywood;
-    margin:10px;
-    font-size:10px;
-    padding:8px;
-    line-height:2.0;
-    color:#fff;
-    border-radius: 3px;
+.margin_outside { 
+    margin:0.5rem;
 }
 
-button
-{
-    border-radius: 0px 5px 5px 0px;
-    background-color: #fff;
-    border: 1px solid #999;
-}
-button img
-{
-    width: 40px;
-    height: 40px;
+.background {
+    background-color: #f2f2f2;
 }
 
-header
-{
-    border-bottom-width: 10px;
-    text-color: red;
-    background: #efefef;
-}
-
-button
-{
-    font-size: 2em;
-}
-.container-fluid
-{
-    height: 40px;
-    background: #696969;
-    padding-top: 10px;
-    text-align: center;
-    font: bold 10px arial;
-    color: #fff;
-}
-
-/* media queries*/
-@media screen and (max-width:500px){
-.tdcity
-{
-    flex: 0 0 100%;
-    max-width: 100%;
-    
-}
-.tdcitycovid
-{
-    flex: 0 0 100%;
-    max-width: 100%;
- }
-    
-    topbar {
-        
-        font: bold 20px arial;
-    }
-    
-    footer{
-        background-color: black;
-    }
+.border {
+    border: 0.05rem solid black;
 }
