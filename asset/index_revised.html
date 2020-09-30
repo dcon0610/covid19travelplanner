@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid Travel Planner</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" integrity="sha512-ADrqa2PY1TZtb/MoLZIZu/Z/LlPaWQeDMBV73EMwjGam43/JJ5fqW38Rq8LJOVGCDfrJeOMS3Q/wRUVzW5DkjQ==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class="background">
 <nav
@@ -29,15 +29,15 @@
             <div class="column">
                 Enter the destination Country:
             </div>
-            <div class=column>
+            <div class="column">
                 <input id="country" class="margin" type="text" placeholder="Country"/>
                 <button id="search">Go</button>
             </div>
           
         
-            <div class="column">
+            <div class="column"> Search History
+                <ul id="searchHistory" ></ul>
 
-            previous searches appear here
 
             </div>
         
@@ -181,20 +181,6 @@
 
            
         </section> 
-              
-
-
-        <style>
-            .center { display: flex;
-              margin: 0 auto; justify-content: center;   white-space: nowrap ;}
-            .padding {padding: 2%;}
-            .color { background-color: #66ccff}
-            .margin {margin-top:2%}
-            .margin_outside { margin:0.5rem}
-            .background {background-color: #f2f2f2}
-            .border {border: 0.05rem solid black}
-            
-            </style>
              
         
 
