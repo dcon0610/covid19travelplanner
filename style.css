@@ -1,39 +1,10 @@
-table {
-    width: 100%;
-}
 
-.navbar {
-    background-color: #66ccff;
-}
+.center { display: flex;
+    margin: 0 auto; justify-content: center;   white-space: nowrap ;}
 
-#noWrap {
-    white-space: nowrap;
-}
-
-/*class css not in bulma which required adjustment*/
-.center { 
-    display: flex;
-    margin: 0 auto; 
-    justify-content: center;   
-    white-space: nowrap ;
-}
-
-.padding {
-    padding: 2%;
-}
-
-.margin {
-    margin-top:2%;
-}
-
-.margin_outside { 
-    margin:0.5rem;
-}
-
-.background {
-    background-color: #f2f2f2;
-}
-
-.border {
-    border: 0.05rem solid black;
-}
+  .color { background-color: #66ccff}
+ 
+  .margin_outside { margin:0.5rem}
+  .background {background-color: #f2f2f2}
+  .border {border: 0.05rem solid black}
+  
