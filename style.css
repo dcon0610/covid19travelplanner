@@ -8,3 +8,34 @@
   .background {background-color: #f2f2f2}
   .border {border: 0.05rem solid black}
   
+  
+  
+  /* Modal Content */
+  .modal-content11 {
+    display:none;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 10px solid #888;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   
+
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

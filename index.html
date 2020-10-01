@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Covid Travel Planner</title>
-    
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" integrity="sha512-ADrqa2PY1TZtb/MoLZIZu/Z/LlPaWQeDMBV73EMwjGam43/JJ5fqW38Rq8LJOVGCDfrJeOMS3Q/wRUVzW5DkjQ==" crossorigin="anonymous" />
     <link  rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body class="background">
     <header>
         <nav
@@ -95,6 +96,10 @@
 
                         <input class="margin" id="mycity" type="text" placeholder="my city"/>
                     </h2> </span>
+                    <span class="subtitle"> <h2 >Meeting Date
+
+                        <input class="margin" id="date" type="date" placeholder="date"/>
+                    </h2> </span>
                     <br>  
                     <table class="table is-bordered is-striped">
                         
@@ -178,10 +183,11 @@
                     <span class="subtitle"> <h2>Destination Country
                         <input class="margin" id="destinationcountry" type="text" placeholder="Destination Country"/>
                     </h2> </span>
+                    <button id="go" class="btn-secondary">go!</button>
 
                     <br> 
                 
-                    <table class="table is-bordered is-striped narrow">
+                    <table class="table is-bordered is-striped is-narrow">
                         <tr>
                             <td>7:00 AM</td>
                             <td id="destination7"><input id="0" class="input" type="text" name="" id="1"></td>
@@ -252,18 +258,32 @@
 
             </div>
 
-           
+        
         </section> 
               
 
 
 
-             
+       
         
 
     
  
     </main>
+   
+        
+        <div id="warningmodal" class="modal-content11 ">
+          <p class="center">
+          Please enter all cities, countries and the date and click go before trying to save meeting.
+          </p>
+          <br>
+          <footer>
+            <button id="ok" class="button is-success center">Ok</button>
+           
+          </footer>
+        </div>
+     
+      
 </body>
 </html> 
 <!--style needs to be in the html otherwise it breaks and display is not what we want-->

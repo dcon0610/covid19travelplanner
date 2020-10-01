@@ -1,5 +1,32 @@
 $(document).ready(function  (){
     var searchedCountries=[]
+    var myCityTimeOffset
+    var destinationCityTimeOffset
+
+
+   
+    for (i=0; i<20; i++) 
+         { 
+        $("#userB"+i).click(function() {
+            if($('#go').data('clicked'))
+            {
+          return
+        }
+           else {
+            $("#warningmodal").css('display', 'inline');
+         
+
+           }
+        })
+
+
+
+}
+
+$("#ok").click(function() {
+    $("#warningmodal").css('display', 'none');
+
+})
 
     for (i=1;i<localStorage.length+1; i++){
         searchedCountries[i]=localStorage.getItem(i)
@@ -61,34 +88,89 @@ $(document).ready(function  (){
  
       }
 
-      $('#mycity').keypress(function (e) {
-        var key = e.which;
-        if(key == 13){
-           storeUTC()
-        }})
-     
+      $(function(){
+        $('#go').click(function() {
+            $(this).data('clicked', true);
+            computedTimeDifference()
+        });
+    });
+    
 
         // $('#search').click(function () {
         //     Covid()})
-  function storeUTC() {
+  function computedTimeDifference() {
     var APIkeytimezone = "9652044f0e85425c9a02a36ec01ddd01&tz"
     var myCity=$("#mycity"). val();
+    var destinationCity=$("#destinationcity"). val();
+    var destinationCountry=$("#destinationcountry"). val();
+    
     myCity=myCity.charAt(0).toUpperCase()+myCity.slice(1)
-   
     k=localStorage.length
     var myCountry=localStorage.getItem(k)
     myCountry=myCountry.charAt(0).toUpperCase()+myCountry.slice(1)
-    thisCityUrl= "https://api.ipgeolocation.io/timezone?apiKey=" +APIkeytimezone+"="+ myCountry + "/" + myCity
+   
     
+    destinationCity=destinationCity.charAt(0).toUpperCase()+destinationCity.slice(1)
+    destinationCountry=destinationCountry.charAt(0).toUpperCase()+destinationCountry.slice(1)
+
+   
+    
+   
+    thisCityUrl= "https://api.ipgeolocation.io/timezone?apiKey=" +APIkeytimezone+"="+ myCountry + "/" + myCity
+    destinationCityUrl = "https://api.ipgeolocation.io/timezone?apiKey=" +APIkeytimezone+"="+ destinationCountry + "/" + destinationCity
     $.ajax({
         url: thisCityUrl,
         method: "GET",
       }).then(function(response) {
-        myCityTime=response.timezone_offset
+        myCityTimeOffset=response.timezone_offset
+
+
    
   })
-console.log(myCityTime)
-}
+
+  $.ajax({
+    url: thisCityUrl,
+    method: "GET",
+  }).then(function(response) {
+    myCityTimeOffset=response.timezone_offset
+    $.ajax({
+        url: destinationCityUrl,
+        method: "GET",
+      }).then(function(response) {
+        destinationCityTimeOffset=response.timezone_offset
+      
+
+        for (i=0; i<20; i++) {
+            $("#userB"+i).click(function() {
+                var time = this.id.replace(/\D/g, "");
+
+                console.log(myCityTimeOffset)
+                console.log(destinationCityTimeOffset)
+                console.log(time   )
+                var timeInOtherCity=Math.floor(Number(time)+(Number(destinationCityTimeOffset)-Number(myCityTimeOffset)))
+                alert(timeInOtherCity)
+               
+            })
+
+        }
+       
+
+
+})
+
+})
     
+
+}
+
+
+
+
+   
+
+
+
+
+
 
 })
