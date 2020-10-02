@@ -1,7 +1,7 @@
 $(document).ready(function  (){
     var searchedCountries=[]
-    var myCityTimeOffset
-    var destinationCityTimeOffset
+   
+
 
 
    
@@ -96,9 +96,14 @@ $("#ok").click(function() {
     });
     
 
-        // $('#search').click(function () {
-        //     Covid()})
   function computedTimeDifference() {
+    var myCityTimeOffset
+    var destinationCityTimeOffset
+    var dayLightSavingMyCity
+    var isDayLightSavingMyCity
+    var dayLightSavingDestinationCity
+    var isDayLightSavingDestinationCity
+
     var APIkeytimezone = "9652044f0e85425c9a02a36ec01ddd01&tz"
     var myCity=$("#mycity"). val();
     var destinationCity=$("#destinationcity"). val();
@@ -106,7 +111,7 @@ $("#ok").click(function() {
     
     myCity=myCity.charAt(0).toUpperCase()+myCity.slice(1)
     k=localStorage.length
-    var myCountry=localStorage.getItem(k)
+    var myCountry=$("#continent"). val();
     myCountry=myCountry.charAt(0).toUpperCase()+myCountry.slice(1)
    
     
@@ -123,6 +128,10 @@ $("#ok").click(function() {
         method: "GET",
       }).then(function(response) {
         myCityTimeOffset=response.timezone_offset
+        dayLightSavingMyCity=response.dst_savings
+        isDayLightSavingMyCity=response.is_dst
+        console.log(response)
+
 
 
    
@@ -138,18 +147,58 @@ $("#ok").click(function() {
         method: "GET",
       }).then(function(response) {
         destinationCityTimeOffset=response.timezone_offset
+        dayLightSavingDestinationCity=response.dst_savings
+        isDayLightSavingDestinationCity=response.is_dst
+        console.log(response)
       
 
         for (i=0; i<20; i++) {
             $("#userB"+i).click(function() {
+                var totalTimeDifferenceHours
+                var totalTimeDifferenceMinutes
+                var dayLightSavingAltered
                 var time = this.id.replace(/\D/g, "");
+                var date=$("#dateId"). val();
+                var array=date.split("-")
+               
+                formattedDate=new Date(array[0], array[1], array[2], time)
+              
+                console.log(formattedDate)
+               
+               
+                
+            
 
                 console.log(myCityTimeOffset)
                 console.log(destinationCityTimeOffset)
-                console.log(time   )
-                var timeInOtherCity=Math.floor(Number(time)+(Number(destinationCityTimeOffset)-Number(myCityTimeOffset)))
-                alert(timeInOtherCity)
-               
+                console.log(time)
+                if (isDayLightSavingMyCity){
+                    alert("adelaide")
+                    myCityTimeOffset=myCityTimeOffset+dayLightSavingMyCity
+
+                }
+
+                if (isDayLightSavingDestinationCity){
+
+                   
+                    dayLightSavingAltered=destinationCityTimeOffset+dayLightSavingDestinationCity
+                    console.log(dayLightSavingAltered)
+
+                }
+
+                totalTimeDifferenceHours=dayLightSavingAltered-myCityTimeOffset
+                totalTimeDifferenceMinutes=(totalTimeDifferenceHours-Math.floor(totalTimeDifferenceHours))*60
+              
+            console.log(totalTimeDifferenceHours)
+              formattedDate.setHours( formattedDate.getHours() + totalTimeDifferenceHours )
+              formattedDate.setMinutes( formattedDate.getMinutes() - totalTimeDifferenceMinutes );
+              console.log(formattedDate)
+             var hours= moment(formattedDate).format('HH.mm')
+             console.log(hours)
+            $("#time").html(hours)
+          
+                
+           
             })
 
         }

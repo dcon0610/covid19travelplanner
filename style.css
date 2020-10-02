@@ -39,3 +39,7 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  .hide {display:none}
+
+  .width {width:100%; height: 30%}
