@@ -30,3 +30,16 @@ Assigned roles:
 Hebe - using HTML and a CSS framework create the webpage
 David - Jquery Programming
 Timothy - Organisational Lead and Code Reviewer 
+
+<p>The URL of the deployed application.
+https://dcon0610.github.io/covid19travelplanner/</p>
+
+
+<p>The URL of the GitHub repository.
+https://github.com/dcon0610/covid19travelplanner</p>
+
+Here is the screeshot of covid numbers by country:
+![Search for Covid Data](https://github.com/dcon0610/covid19travelplanner/blob/hebe1/asset/Search%20for%20Covid%20Data.png)
+
+Here is the screeshot of flight check information:
+![Meeting Schedule](https://github.com/dcon0610/covid19travelplanner/blob/hebe1/asset/Meeting%20Schedule.png)
