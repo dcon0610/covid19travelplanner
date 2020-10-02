@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Covid Travel Planner</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" integrity="sha512-ADrqa2PY1TZtb/MoLZIZu/Z/LlPaWQeDMBV73EMwjGam43/JJ5fqW38Rq8LJOVGCDfrJeOMS3Q/wRUVzW5DkjQ==" crossorigin="anonymous" />
+    <link  rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="background">
+    <header>
+        <nav
+            id="bluenav"
+
+            class="navbar color"
+            aria-label="main navigation"
+        >
+            <section class="navbar-brand center">
+                <h1
+                    class="navbar-item title is-4"
+                >
+                    Covid 19 Travel Planner
+                </h1>
+            </section>
+        </nav>
+    </header>
+
+    <main class="columns margin_outside">
+    <!--html for lefthand side of the screen-->
+        <aside class="column is-one-quarter box mr-4 ">
+    
+            <article class="column">
+              Enter the destination Country:
+            </article>
+            
+            <article class=column>
+                <input id="country" class="margin" type="text" placeholder="Country"/>
+                <button id="search">Go</button>
+            </article>
+          
+        
+            <article class="column">Most Recent Searches Appear Here
+
+                <ul id=searchHistory></ul>
+
+
+            </article>
+        </aside>
+        
+        
+        <section class="column box">
+            <!--Covid data display section-->
+            <article class="columns">
+                <h1 class="column title is-4">Covid Data</h1>
+            </article>
+            
+            <section class="columns">
+                <article class="column is-one-quarter">
+                    <p>Total cases overall:</p>
+                </article>
+                <article class="column">
+                    <p id="total_cases"></p>
+                </article>
+            </section>
+
+            <section class="columns">
+                <article class="column is-one-quarter">
+                    <p>Percentage Population Infected:</p>
+                </article>
+                <article class="column">
+                    <p id="percentage">number 2</p>
+                </article>
+            </section>
+           
+            <section class="columns">
+                <article class="column is-one-quarter">
+                    <p>Cases last 7 days:</p>
+                </article>
+                <article class="column">
+                    <h1 id="last_seven"></h1>
+                </article>
+            </section>
+
+            <section class="columns">
+                <span class="column title is-4" id="noWrap">Meeting Schedule</span>
+            </section>
+            <!--Meeting Planner via UTC conversion-->
+            <div class="columns">
+                <!--User's Timezone Table-->
+                <section class="column">
+
+                    <span class="subtitle"> <h2 >My City
+
+                        <input class="margin" id="mycity" type="text" placeholder="my city"/>
+                    </h2> </span>
+                    <span class="subtitle"> <h2 >Meeting Date
+
+                        <input class="margin" id="date" type="date" placeholder="date"/>
+                    </h2> </span>
+                    <br>  
+                    <table class="table is-bordered is-striped">
+                        
+                        <tr>
+                            <td>7:00 AM</td>
+                            <td id="user7"><input id="0" class="input" type="text" name="" id="1"></td>
+                            <td><button id="userB7" class="btn-secondary">save</button></td>
+                          </tr>
+
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td id="user8"><input id="0" class="input" type="text" name="" id="1"></td>
+                            <td><button id="userB8" class="btn-secondary">save</button></td>
+                          </tr>
+
+                        <tr>
+                            <td>9:00 AM</td>
+                            <td id="user9"><input id="0" class="input" type="text" name="" id="1"></td>
+                            <td><button id="userB9" class="btn-secondary">save</button></td>
+                      </tr>
+
+                      <tr>
+                        <td>10:00 AM</td>
+                        <td id="user10"><input id="1" class="input" type="text" name="" id="2"></td>
+                        <td><button id="userB10" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>11:00 AM</td>
+                        <td id="user11"><input id="2" class="input" type="text" name="" id="3"></td>
+                        <td><button id="userB11" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>12:00 PM</td>
+                        <td id="user12"><input id="3" class="input" type="text" name="" id="4"></td>
+                        <td><button id="userB12" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>1:00 PM</td>
+                        <td id="user13"><input id="4" class="input" type="text" name="" id="5"></td>
+                        <td><button id="userB13" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>2:00 PM</td>
+                        <td id="user14"><input id="5" class="input" type="text" name="" id="6"></td>
+                        <td><button id="userB14" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td >3:00 PM</td>
+                        <td id="user15"><input id="6" class="input" type="text" name="" id="7"></td>
+                        <td><button id="userB15" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>4:00 PM</td>
+                        <td id="user16"><input id="7" class="input" type="text" name="" id="8"></td>
+                        <td><button id="userB16" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>5:00 PM</td>
+                        <td id="user17"><input id="7" class="input" type="text" name="" id="8"></td>
+                        <td><button id="userB17" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>6:00 PM</td>
+                        <td id="user18"><input id="7" class="input" type="text" name="" id="8"></td>
+                        <td><button id="userB18" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>7:00 PM</td>
+                        <td id="user19"><input id="7" class="input" type="text" name="" id="8"></td>
+                        <td><button id="userB19" class="btn-secondary">save</button></td>
+                      </tr>
+                     </table>
+                </section>
+
+                <!--User's destination City-->
+                <section class="column">
+                    <span class="subtitle"> <h2>Destination City
+                        <input class="margin" id="destinationcity" type="text" placeholder="Destination City"/>
+                    </h2> </span>
+
+                    <span class="subtitle"> <h2>Destination Country
+                        <input class="margin" id="destinationcountry" type="text" placeholder="Destination Country"/>
+                    </h2> </span>
+                    <button id="go" class="btn-secondary">go!</button>
+
+                    <br> 
+                
+                    <table class="table is-bordered is-striped is-narrow">
+                        <tr>
+                            <td>7:00 AM</td>
+                            <td id="destination7"><input id="0" class="input" type="text" name="" id="1"></td>
+                            <td><button id="destinationB7" class="btn-secondary">save</button></td>
+                          </tr>
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td id="destination8"><input id="0" class="input" type="text" name="" id="1"></td>
+                            <td><button id="destinationB8" class="btn-secondary">save</button></td>
+                        </tr>
+                      <tr>
+                        <td>9:00 AM</td>
+                        <td id="destination9"><input id="0" class="input" type="text" name="" id="1"></td>
+                        <td><button id="destinationB9" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>10:00 AM</td>
+                        <td id="destination10"><input id="1" class="input" type="text" name="" id="2"></td>
+                        <td><button id="destinationB10" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>11:00 AM</td>
+                        <td id="destination11"><input id="2" class="input" type="text" name="" id="3"></td>
+                        <td><button id="destinationB11" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>12:00 PM</td>
+                        <td id="destination12"><input id="3" class="input" type="text" name="" id="4"></td>
+                        <td><button id="destinationB12" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>1:00 PM</td>
+                        <td id="destination13"><input id="4" class="input" type="text" name="" id="5"></td>
+                        <td><button id="destinationB13" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>2:00 PM</td>
+                        <td id="destination14"><input id="5" class="input" type="text" name="" id="6"></td>
+                        <td><button id="destinationB14" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td >3:00 PM</td>
+                        <td id="destination15"><input id="6" class="input" type="text" name="" id="7"></td>
+                        <td><button id="destinationB15" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>4:00 PM</td>
+                        <td id="destination16"><input id="7" class="input" type="text" name="" id="8"></td>
+                        <td><button id="destinationB16" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>5:00 PM</td>
+                        <td id="destination17"><input id="7" class="input" type="text" name="" id="8"></td>
+                        <td><button id="destinationB17" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>6:00 PM</td>
+                        <td id="destination18"><input id="7" class="input" type="text" name="" id="8"></td>
+                        <td><button id="destinationB18" class="btn-secondary">save</button></td>
+                      </tr>
+                      <tr>
+                        <td>7:00 PM</td>
+                        <td id="destination19"><input id="7" class="input" type="text" name="" id="8"></td>
+                        <td><button id="destinationB19" class="btn-secondary">save</button></td>
+                      </tr>
+                    </table>
+                </section>
+
+            </div>
+
+        
+        </section> 
+              
+
+
+
+       
+        
+
+    
+ 
+    </main>
+   
+        
+        <div id="warningmodal" class="modal-content11 ">
+          <p class="center">
+          Please enter all cities, countries and the date and click go before trying to save meeting.
+          </p>
+          <br>
+          <footer>
+            <button id="ok" class="button is-success center">Ok</button>
+           
+          </footer>
+        </div>
+     
+      
+</body>
+</html> 
+<!--style needs to be in the html otherwise it breaks and display is not what we want-->
+
+<!--JS script files, jquery and moment.js and script.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="script.js">                            </script>
+
