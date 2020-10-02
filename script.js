@@ -47,6 +47,7 @@ $("#ok").click(function() {
         Covid()})
         
       function Covid() {
+        
        var country = $("#country"). val();
             k=localStorage.length
             localStorage.setItem(k+1,country)
@@ -80,8 +81,18 @@ $("#ok").click(function() {
         var difference = todayCases-weekAgoCases
        $("#last_seven"). html(difference)
        $("#total_cases"). html(todayCases)
-       
-
+       if (difference<100){
+       $("#recommendation"). html('<p>'+"Travel to this country is recommended: find the weather in the city linked"+'</p>')
+       $("#recommendation"). append('<a href="weatherapp/weatherapp.html" target="_blank">Find the Weather</a>')
+       $("#noWrap").addClass('hide')
+       $("#schedule").addClass('hide')
+       }
+       else if (difference>100){
+        $("#recommendation"). html('<p>'+"Travel to this country is NOT recommended:"+'</p>')
+        $("#recommendation"). append('<p>'+"Please see the timezone converter to schedule meetings below"+'</p>')
+        $("#noWrap").removeClass('hide')
+        $("#schedule").removeClass('hide')
+       }
     })
   
   
@@ -193,9 +204,14 @@ $("#ok").click(function() {
               formattedDate.setHours( formattedDate.getHours() + totalTimeDifferenceHours )
               formattedDate.setMinutes( formattedDate.getMinutes() - totalTimeDifferenceMinutes );
               console.log(formattedDate)
-             var hours= moment(formattedDate).format('HH.mm')
+             var hours= moment(formattedDate).format('YYYY MM +"Day" DD HH.mm')
              console.log(hours)
-            $("#time").html(hours)
+            $("#time").html('<p>'+"Year: "+ moment(formattedDate).format('YYYY')+'</p>')
+            $("#time").append('<p>'+"Month: "+ moment(formattedDate).format('MMMM')+'</p>')
+            $("#time").append('<p>'+"Day: "+ moment(formattedDate).format('DD')+'</p>')
+            $("#time").append('<p>'+"Time: "+ moment(formattedDate).format('HH:mm')+'</p>')
+            
+
           
                 
            

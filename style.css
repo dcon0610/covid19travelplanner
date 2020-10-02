@@ -40,6 +40,6 @@
     cursor: pointer;
   }
 
-  .hide {display:none}
+  .hide {display:none; opacity: 0;}
 
   .width {width:100%; height: 30%}

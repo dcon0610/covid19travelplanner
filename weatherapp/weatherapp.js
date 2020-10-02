@@ -6,15 +6,7 @@ $(document).ready(function(){
     var k=0
     var listItem=[]
 
-  //display cities previously searched by looping through local storage
-    for (i=1;i<localStorage.length+1; i++){
-      listItem[i]=localStorage.getItem(i)
-      console.log("listitem",listItem[i])
-      var history = $("<li>", {id: i+"history"});
-     
-      $('#search_history').append(history)
-      $("#"+i+"history").html(listItem[i])
-} 
+  
     //if enter pressed, city weather data function entered
     $('#search').keypress(function (e) {
         var key = e.which;
