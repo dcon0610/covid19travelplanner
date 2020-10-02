@@ -169,20 +169,22 @@ $("#ok").click(function() {
                 var totalTimeDifferenceMinutes
                 var dayLightSavingAltered
                 var time = this.id.replace(/\D/g, "");
+                
                 var date=$("#dateId"). val();
+                console.log("date, time", date, time)
                 var array=date.split("-")
                
                 formattedDate=new Date(array[0], array[1], array[2], time)
-              
                 console.log(formattedDate)
+             
                
                
                 
             
 
-                console.log(myCityTimeOffset)
-                console.log(destinationCityTimeOffset)
-                console.log(time)
+                console.log("myCityTimeOffset", myCityTimeOffset)
+                console.log("destination city time offset", destinationCityTimeOffset)
+                console.log("time", time)
                 if (isDayLightSavingMyCity){
                     alert("adelaide")
                     myCityTimeOffset=myCityTimeOffset+dayLightSavingMyCity
@@ -190,22 +192,25 @@ $("#ok").click(function() {
                 }
 
                 if (isDayLightSavingDestinationCity){
-
+              
                    
                     dayLightSavingAltered=destinationCityTimeOffset+dayLightSavingDestinationCity
-                    console.log(dayLightSavingAltered)
+                    console.log("daylightsavingsaltered", dayLightSavingAltered)
 
                 }
 
                 totalTimeDifferenceHours=dayLightSavingAltered-myCityTimeOffset
+                console.log("totaltimedifferencehours", totalTimeDifferenceHours)
                 totalTimeDifferenceMinutes=(totalTimeDifferenceHours-Math.floor(totalTimeDifferenceHours))*60
-              
-            console.log(totalTimeDifferenceHours)
-              formattedDate.setHours( formattedDate.getHours() + totalTimeDifferenceHours )
-              formattedDate.setMinutes( formattedDate.getMinutes() - totalTimeDifferenceMinutes );
-              console.log(formattedDate)
-             var hours= moment(formattedDate).format('YYYY MM +"Day" DD HH.mm')
-             console.log(hours)
+                console.log("totaltimedifferenceminutes", totalTimeDifferenceMinutes)
+
+          
+              formattedDate.setHours( formattedDate.getHours() + Math.floor(totalTimeDifferenceHours) )
+              console.log("date after set hours", formattedDate)
+              formattedDate.setMinutes( formattedDate.getMinutes() + totalTimeDifferenceMinutes );
+              console.log("formattedDate after set minutes", formattedDate)
+             
+             
             $("#time").html('<p>'+"Year: "+ moment(formattedDate).format('YYYY')+'</p>')
             $("#time").append('<p>'+"Month: "+ moment(formattedDate).format('MMMM')+'</p>')
             $("#time").append('<p>'+"Day: "+ moment(formattedDate).format('DD')+'</p>')
