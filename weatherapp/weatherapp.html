@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" integrity="sha512-ADrqa2PY1TZtb/MoLZIZu/Z/LlPaWQeDMBV73EMwjGam43/JJ5fqW38Rq8LJOVGCDfrJeOMS3Q/wRUVzW5DkjQ==" crossorigin="anonymous" />
+    <link  rel="stylesheet" type="text/css" href="../asset/style.css">
+</head>
+    <title>Weather App</title>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-item title is-4 center">Weather Dashboard</span>
+    </nav>
+
+  <main>
+      <div class="columns">
+        <!--Sidebar for weather searches-->
+          <aside class="padding column is-one-fifth box mr-4">
+                <h3>Search For a City:</h3>
+                <input id="search" type="text" placeholder="enter the city here">
+               
+          </aside>
+
+          <section class="column">
+            <article>
+                <p id="city"></p>
+                <p id="temperature"></p>
+                <p id="humidity"></p>
+                <p id="wind_speed"></p>
+                <p id="UV_index"></p>
+            </article>
+            <br>
+            <div class="row title" id="forecast"></div>
+             
+            <br>
+            
+
+            <div id="cards" class="columns">
+ 
+
+              
+            </div>
+              
+        
+              
+             
+        </section>
+      </div>
+  </main>
+
+</body>
+</html>
+<style>
+    .center{text-align:center; margin: auto; width: 100%;}
+    .blue{background-color:rgb(166, 166, 247);padding: 0%;}
+
+</style>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="weatherapp.js"></script>
