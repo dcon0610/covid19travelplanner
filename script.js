@@ -170,7 +170,8 @@ $("#ok").click(function() {
             $("#userB"+i).click(function() {
                 var totalTimeDifferenceHours
                 var totalTimeDifferenceMinutes
-                var dayLightSavingAltered
+                var dayLightSavingAltered=0
+                var dayLightSavingAlteredMyCity=0
                 var time = this.id.replace(/\D/g, "");
                 
                 var date=$("#dateId"). val();
@@ -189,20 +190,20 @@ $("#ok").click(function() {
                 console.log("destination city time offset", destinationCityTimeOffset)
                 console.log("time", time)
                 if (isDayLightSavingMyCity){
-                  
-                    myCityTimeOffset=myCityTimeOffset+dayLightSavingMyCity
+                 
+                  dayLightSavingAlteredMyCity=dayLightSavingMyCity
 
                 }
 
                 if (isDayLightSavingDestinationCity){
               
                    
-                    dayLightSavingAltered=destinationCityTimeOffset+dayLightSavingDestinationCity
+                    dayLightSavingAltered=dayLightSavingDestinationCity
                     console.log("daylightsavingsaltered", dayLightSavingAltered)
 
                 }
 
-                totalTimeDifferenceHours=dayLightSavingAltered-myCityTimeOffset
+                totalTimeDifferenceHours=destinationCityTimeOffset+dayLightSavingAltered-myCityTimeOffset-dayLightSavingAlteredMyCity
                 console.log("totaltimedifferencehours", totalTimeDifferenceHours)
                 totalTimeDifferenceMinutes=(totalTimeDifferenceHours-Math.floor(totalTimeDifferenceHours))*60
                 console.log("totaltimedifferenceminutes", totalTimeDifferenceMinutes)
