@@ -189,7 +189,7 @@ $("#ok").click(function() {
                 console.log("destination city time offset", destinationCityTimeOffset)
                 console.log("time", time)
                 if (isDayLightSavingMyCity){
-                    alert("adelaide")
+                  
                     myCityTimeOffset=myCityTimeOffset+dayLightSavingMyCity
 
                 }
