@@ -47,9 +47,8 @@ https://dcon0610.github.io/covid19travelplanner/</p>
 
 <p>The URL of the GitHub repository.
 https://github.com/dcon0610/covid19travelplanner</p>
-
-Here is the screeshot of covid numbers by country:
-![Search for Covid Data](https://github.com/dcon0610/covid19travelplanner/blob/hebe1/asset/Search%20for%20Covid%20Data.png)
-
-Here is the screeshot of flight check information:
-![Meeting Schedule](https://github.com/dcon0610/covid19travelplanner/blob/hebe1/asset/Meeting%20Schedule.png)
+Here are some pictures of the working app.
+![first picture](assets/screenshot1.png)
+![second picture](assets/screenshot2.png)
+![second picture](assets/screenshot3.png)
+![second picture](assets/screenshot4.png)
