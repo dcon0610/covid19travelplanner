@@ -49,10 +49,10 @@ https://dcon0610.github.io/covid19travelplanner/</p>
 https://github.com/dcon0610/covid19travelplanner</p>
 Here are some pictures of the working app.
 
-![first picture](assets/screenshot1.png)
+![first picture](https://github.com/dcon0610/covid19travelplanner/blob/master/asset/screenshot1.png)
 
-![second picture](assets/screenshot2.png)
+![second picture](https://github.com/dcon0610/covid19travelplanner/blob/master/asset/screenshot2.png)
 
-![second picture](assets/screenshot3.png)
+![second picture](https://github.com/dcon0610/covid19travelplanner/blob/master/asset/screenshot3.png)
 
-![second picture](assets/screenshot4.png)
+![second picture](https://github.com/dcon0610/covid19travelplanner/blob/master/asset/screenshot4.png)
