@@ -12,6 +12,9 @@ $(document).ready(function  (){
             {
           return
         }
+        else if () { 
+
+        }
            else {
             $("#warningmodal").css('display', 'inline');
          
@@ -84,6 +87,8 @@ $("#ok").click(function() {
        if (difference<100){
        $("#recommendation"). html('<p>'+"Travel to this country is recommended: find the weather in the city linked"+'</p>')
        $("#recommendation"). append('<a href="weatherapp/weatherapp.html" target="_blank">Find the Weather</a>')
+       $("#recommendation"). html('<p>'+"Flight booking link is below:"+'</p>')
+       $("#recommendation"). append('<a href="https://www.webjet.com.au/" target="_blank">Flights</a>')
        $("#noWrap").addClass('hide')
        $("#schedule").addClass('hide')
        }
